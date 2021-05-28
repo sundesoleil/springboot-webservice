@@ -1,6 +1,6 @@
 var main = {
     init : function(){
-        var_this = this;
+        var _this = this;
         $('#btn-save').on('click', function(){
             _this.save();
         });
@@ -21,7 +21,7 @@ var main = {
         }).done(function(){
             alert('글이 등록되었습니다.');
             window.location.href='/';
-        }).fail(function(){
+        }).fail(function(error){
             alert(JSON.stringify(error));
         });
     }
